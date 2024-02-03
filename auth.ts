@@ -70,22 +70,6 @@ export const config = {
     logo: "https://next-auth.js.org/img/logo/logo-sm.png",
   },
   providers: [
-    Credentials({
-      name: "Credentials",
-      credentials: {
-        username: { label: "Username", type: "text" },
-        password: { label: "Password", type: "password" },
-      },
-      async authorize(credentials: any, req: any) {
-
-        return {
-          image: "https://next-auth.js.org/img/logo/logo-sm.png",
-          email: credentials?.email,
-          password: credentials?.password,
-        }
-
-      }
-    }),
     // Apple,
     // Atlassian,
     // Auth0,
